@@ -6,19 +6,16 @@ export default function PhilosophySection() {
 
   const lines = [
     { 
-      text: "We find what to automate, who your users are",
-      highlight: "automate",
-      align: "left"
+      text: "We're not building tools. We're building teammates.",
+      highlights: ["tools", "teammates"]
     },
     { 
-      text: "& how AI can optimize your workflow.",
-      highlight: "workflow",
-      align: "left"
+      text: "AI Employees that don't just assist—they own their role,",
+      highlights: ["own"]
     },
     { 
-      text: "Best part is we also build and launch real solutions.",
-      highlight: "real solutions",
-      align: "left"
+      text: "make decisions, and deliver results while you sleep.",
+      highlights: ["deliver results"]
     }
   ]
 
@@ -38,16 +35,38 @@ export default function PhilosophySection() {
     })
   }
 
-  const renderLineWithHighlight = (text, highlight) => {
-    if (!highlight) return text
+  const renderLineWithHighlights = (text, highlights) => {
+    if (!highlights || highlights.length === 0) return text
     
-    const parts = text.split(new RegExp(`(${highlight})`, 'gi'))
+    // Create a regex pattern that matches any of the highlight phrases
+    const pattern = highlights.map(h => h.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')
+    const parts = text.split(new RegExp(`(${pattern})`, 'gi'))
+    
     return parts.map((part, index) => {
-      if (part.toLowerCase() === highlight.toLowerCase()) {
+      const isHighlight = highlights.some(h => h.toLowerCase() === part.toLowerCase())
+      
+      if (isHighlight) {
         return (
-          <span key={index} style={{ color: highlightColor, fontStyle: 'italic' }}>
+          <motion.span
+            key={index}
+            style={{ 
+              color: highlightColor, 
+              fontStyle: 'italic',
+              display: 'inline-block'
+            }}
+            animate={{
+              rotateY: [0, 5, -5, 0],
+              scale: [1, 1.05, 1]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: index * 0.3
+            }}
+          >
             {part}
-          </span>
+          </motion.span>
         )
       }
       return part
@@ -63,7 +82,23 @@ export default function PhilosophySection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center gap-10">
-          {/* Quote Container with Custom Alignment */}
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="inline-block"
+          >
+            <div className="px-4 py-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 flex items-center gap-2">
+              <span className="text-xl">⭐</span>
+              <span className="text-sm font-medium text-accent-muted uppercase tracking-wider">
+                Our Philosophy
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Quote Container */}
           <div className="w-full max-w-[900px]">
             {lines.map((line, index) => (
               <motion.p
@@ -73,14 +108,14 @@ export default function PhilosophySection() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={lineVariants}
-                className="text-3xl lg:text-[38px] font-medium leading-[1.4] tracking-tight mb-2"
+                className="text-3xl lg:text-[42px] font-semibold leading-[1.4] tracking-tight mb-2"
                 style={{ 
-                  color: 'rgba(255, 255, 255, 0.75)',
-                  textAlign: line.align,
+                  color: 'rgba(255, 255, 255, 0.85)',
+                  textAlign: 'left',
                   letterSpacing: '-0.03em'
                 }}
               >
-                {renderLineWithHighlight(line.text, line.highlight)}
+                {renderLineWithHighlights(line.text, line.highlights)}
               </motion.p>
             ))}
           </div>
@@ -98,7 +133,7 @@ export default function PhilosophySection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </div>
-            <p className="text-base text-white/60">Co-founder & AI Strategy Lead</p>
+            <p className="text-base text-white/60">Founder & Chief AI Architect</p>
           </motion.div>
         </div>
       </div>

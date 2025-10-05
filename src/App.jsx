@@ -4,7 +4,8 @@ import HeroSection from './components/HeroSection'
 import PhilosophySection from './components/PhilosophySection'
 import UniqueFeatures from './components/UniqueFeatures'
 import ArchitectureSection from './components/ArchitectureSection'
-import UseCases from './components/UseCases'
+import WhyChooseUs from './components/UseCases'
+import AboutUs from './components/AboutUs'
 import CTASection from './components/CTASection'
 import Footer from './components/Footer'
 
@@ -16,7 +17,8 @@ function App() {
       <PhilosophySection />
       <UniqueFeatures />
       <ArchitectureSection />
-      <UseCases />
+      <WhyChooseUs />
+      <AboutUs />
       <CTASection />
       <Footer />
     </div>

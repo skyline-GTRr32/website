@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-accent-muted max-w-3xl mx-auto px-4">
-            We're not building chatbots. We're building the future of work.
+            We're not building assistants. We're building the future of work.
           </p>
         </motion.div>
 

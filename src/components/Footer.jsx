@@ -11,7 +11,7 @@ export default function Footer() {
             <span className="text-lg font-bold">Employ AI</span>
           </div>
 
-          <div className="flex items-center space-x-8 text-sm text-accent-muted">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-sm text-accent-muted">
             <a href="#about" className="hover:text-white transition-colors">About Us</a>
             <a href="#why-us" className="hover:text-white transition-colors">Why Us</a>
             <a href="#architecture" className="hover:text-white transition-colors">Architecture</a>

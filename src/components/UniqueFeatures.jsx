@@ -52,7 +52,7 @@ export default function UniqueFeatures() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-5xl lg:text-6xl font-bold text-center mb-16"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16"
         >
           What Makes Us Unique
         </motion.h2>

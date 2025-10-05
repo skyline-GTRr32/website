@@ -55,7 +55,7 @@ export default function HeroSection() {
           {/* Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-7xl lg:text-9xl font-extrabold mb-8 leading-[0.9] tracking-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold mb-8 leading-[0.9] tracking-tight"
           >
             Meet Your First
             <br />
@@ -65,25 +65,25 @@ export default function HeroSection() {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-2xl text-accent-muted leading-relaxed mb-12 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl md:text-2xl text-accent-muted leading-relaxed mb-12 max-w-3xl mx-auto px-4"
           >
             Fully autonomous digital teammates that chat, call, and join meetings
             — just like a human.
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex items-center justify-center gap-4 mb-20">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
             <motion.button
               whileHover={{ scale: 1.05, backgroundColor: '#E5E5E5' }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-white text-dark-950 text-lg font-semibold rounded-full transition-all"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white text-dark-950 text-base sm:text-lg font-semibold rounded-full transition-all"
             >
               Book a Demo
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-transparent border border-white/20 text-white text-lg font-semibold rounded-full hover:bg-white/5 transition-all"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-transparent border border-white/20 text-white text-base sm:text-lg font-semibold rounded-full hover:bg-white/5 transition-all"
             >
               Learn How It Works
             </motion.button>
@@ -92,7 +92,7 @@ export default function HeroSection() {
           {/* Stats */}
           <motion.div
             variants={itemVariants}
-            className="flex items-center justify-center gap-16"
+            className="flex items-center justify-center gap-8 sm:gap-12 md:gap-16 flex-wrap"
           >
             {[
               { value: '24/7', label: 'Always Active' },

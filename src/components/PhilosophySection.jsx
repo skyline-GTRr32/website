@@ -108,7 +108,7 @@ export default function PhilosophySection() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={lineVariants}
-                className="text-3xl lg:text-[42px] font-semibold leading-[1.4] tracking-tight mb-2"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-[42px] font-semibold leading-[1.4] tracking-tight mb-2"
                 style={{ 
                   color: 'rgba(255, 255, 255, 0.85)',
                   textAlign: 'left',

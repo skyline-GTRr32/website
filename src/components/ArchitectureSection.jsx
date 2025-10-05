@@ -53,10 +53,10 @@ export default function ArchitectureSection() {
             </div>
           </div>
           
-          <h2 className="text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             How It Works
           </h2>
-          <p className="text-xl text-accent-muted max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-accent-muted max-w-3xl mx-auto px-4">
             A Digital PM is powered by multiple AI agent teams that work together to deliver results—just like a real product manager would.
           </p>
         </motion.div>
@@ -95,7 +95,7 @@ export default function ArchitectureSection() {
           </motion.div>
 
           {/* Stage 2-4: Agent Teams Row */}
-          <div className="flex gap-6 items-stretch flex-wrap justify-center max-w-[1000px]">
+          <div className="flex gap-6 items-stretch flex-wrap justify-center w-full px-4">
             {agentTeams.map((team, index) => (
               <motion.div
                 key={team.id}
@@ -108,7 +108,7 @@ export default function ArchitectureSection() {
                   ease: [0.19, 1, 0.22, 1]
                 }}
                 whileHover={{ y: -5, borderColor: 'rgba(167, 191, 255, 0.3)' }}
-                className="w-[300px] bg-[#1A1A1A] border border-[#333] rounded-xl p-6 transition-all duration-300"
+                className="w-full sm:w-[300px] bg-[#1A1A1A] border border-[#333] rounded-xl p-6 transition-all duration-300"
               >
                 <div className="inline-block px-3 py-1 bg-white/5 rounded-full text-xs font-bold text-white/60 mb-3">
                   STEP {team.step}

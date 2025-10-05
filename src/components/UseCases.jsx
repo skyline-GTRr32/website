@@ -41,10 +41,10 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl lg:text-7xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
             Why Choose Us
           </h2>
-          <p className="text-xl text-accent-muted max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-accent-muted max-w-3xl mx-auto px-4">
             We're not building chatbots. We're building the future of work.
           </p>
         </motion.div>

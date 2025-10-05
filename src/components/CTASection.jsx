@@ -87,7 +87,7 @@ export default function CTASection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl lg:text-8xl font-bold mb-8"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mb-8 px-4"
             >
               Ready to Meet Your
               <br />
@@ -99,7 +99,7 @@ export default function CTASection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-2xl text-accent-muted mb-12 leading-relaxed max-w-3xl mx-auto"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-accent-muted mb-12 leading-relaxed max-w-3xl mx-auto px-4"
             >
               Book a 15-minute demo. See it work live.
               <br />

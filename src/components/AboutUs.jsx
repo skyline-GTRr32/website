@@ -50,11 +50,6 @@ export default function AboutUs() {
             — so humans can focus on creativity and growth.
           </p>
 
-          <p className="text-white/75">
-            We're a team of builders who've spent years in AI systems, language models, and automation — 
-            now bringing it all together to{' '}
-            <span className="text-[#A7BFFF] font-semibold">reinvent how work gets done</span>.
-          </p>
 
           <motion.div
             initial={{ opacity: 0 }}

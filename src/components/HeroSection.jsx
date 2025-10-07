@@ -73,20 +73,22 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-            <motion.button
+            <motion.a
+              href="#contact"
               whileHover={{ scale: 1.05, backgroundColor: '#E5E5E5' }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white text-dark-950 text-base sm:text-lg font-semibold rounded-full transition-all"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white text-dark-950 text-base sm:text-lg font-semibold rounded-full transition-all text-center"
             >
-              Book a Demo
-            </motion.button>
-            <motion.button
+              Contact Us
+            </motion.a>
+            <motion.a
+              href="#architecture"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-transparent border border-white/20 text-white text-base sm:text-lg font-semibold rounded-full hover:bg-white/5 transition-all"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-transparent border border-white/20 text-white text-base sm:text-lg font-semibold rounded-full hover:bg-white/5 transition-all text-center"
             >
               Learn How It Works
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Stats */}
